@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Sign_up_Form</title>
+        <link rel="stylesheet" href="Sign_up_form.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    </head>
+    <form action="">
+    <fieldset>
+        <legend><h2>Sign Up Here</h2></legend>
+    <center>
+    <body>
+        <h2 class="name">Name:</h2>
+        <input type="text" name="name" placeholder="Enter your name here"/>
+        <br/><br/>
+        <h2  class="email">Email id:</h2>
+        <input type="email" name="email" placeholder="Example123@gmail.com"/>
+        <br/><br/>
+        <h2 class="password">Password:</h2>
+        <input type="password" id="pass" name="password"/>
+        <i class="fas fa-eye" onclick="see()"></i>
+        <br/><br/>
+        <h2 class="cnf">Confirm Password:</h2>
+        <input type="password" id="cnf_pass" name="password"/>
+        <br/><br/>
+        <center>
+        <input type="submit" onclick="submit()" class="submit" name="submit" value="SUBMIT"/>
+        <input type="reset" class="Clear" name="reset" value="CLEAR"/>
+        </center>
+        <br/>
+        <p>If you have already acount <a href="Login_page.html" target="_blank">Log in</a></p>
+    </body>
+    </center>
+    </fieldset>
+</form>
+    <script>
+        function submit(){
+            var x=document.getElementById('pass').value;
+            var y=document.getElementById('cnf_pass').value;
+            if(x==y){
+                alert("Thnak you ! Your account has created !!!")
+            }
+            else{
+                alert("Password is not matching !!!")
+            }
+        }
+        function see(){
+            var x=document.getElementById('pass');
+            if(x.type==="password"){
+                x.type="text";
+            }
+            else{
+                x.type="password";
+            }
+        }
+    </script>
+</html>
